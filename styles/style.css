@@ -67,7 +67,8 @@ h3{
 .masthead .mypic {
   height: 12em;
   width: 12em;
-  background: url("myavatar.jpg")no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
