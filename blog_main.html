@@ -24,12 +24,15 @@
 		    text-align: center;
 		}
 		.toc_list{
-			list-style-type: upper-roman
+			list-style-type: upper-roman;
 		}
 
 		#toc_container li, #toc_container ul, #toc_container ul li{
-		    list-style: outside none none !important;
 		    padding: 5px 15px !important;
+		}
+
+		.inner_list{
+			list-style-type: decimal;
 		}
 	</style>
 
@@ -44,14 +47,14 @@
 			<p class="toc_title">Contents</p>
 				<ul class="toc_list">
 			  		<li><a href="#">Basic Intuitions in Theoretical Computer Science</a>
-			  			<ul>
+			  			<ul class="inner_list">
 			    			<li><a href="blog1.html">Decision Problems/Languages</a></li>
 			    			<li><a href="#">Turing Machines</a></li>
 			    			<li><a href="#">P, NP</a></li>
 			  			</ul>
 					</li>
 					<li><a href="#Second_Point_Header">Approximation Algorithms</a>
-			  			<ul>
+			  			<ul class="inner_list">
 			    			<li><a href="#">Approximability of Metric-TSP</a></li>
 			    			<li><a href="#">Inapproximability of General-TSP</a></li>
 			  			</ul>	
