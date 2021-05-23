@@ -36,7 +36,14 @@ a {
   line-height: 2em;
 }
 
+.masthead-title
+{
+  font-size:30px;
+  margin-top:30px;
+  margin-bottom:5px;
+}
 
+/*
 h3{
   margin-top: 1rem;
   margin-bottom: .5rem;
@@ -45,12 +52,13 @@ h3{
   color: #313131;
   text-rendering: optimizeLegibility;
 }
+*/
 
 
 .content h3 {
   padding:30px 30px 10px;
   font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
-  font-size: 40px;
+  font-size: 25px;
   color: #111;
   line-height: 44px;
 }
@@ -64,17 +72,17 @@ h3{
 }
 
 
-.masthead img {
+.masthead .mypic {
   height: 12em;
   width: 12em;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("avatar2.jpeg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   border-radius: 50%;
   margin: auto;
+  background-position: 30% 15%, 40% 80%, 10px 10px
 }
 
 @media only screen and (min-width: 768px)
