@@ -14,13 +14,78 @@ article * {
 }
 
 
-time,p:not(:last-child) { margin-bottom: 2.4rem; }
+time,p:not(:last-child) { margin-bottom: 2.0rem; }
 
 h1   { font: 700 2rem/1.2   "Roboto";   color: hsl(000, 0%, 33%);}
 h2   { font: 400 1.5rem/1.2 "Roboto";   color: hsl(000, 0%, 33%);}
 h3 	 { font: 700 1rem/1.2   "Roboto";   color: hsl(337, 94%,83%);}
 time { font: 700 1rem/1.2   "Roboto";   color: hsl(337, 94%,47%);}
 p    { font: 400 1rem/1.5   "Roboto";   color: hsl(000, 0%, 33%);}
+
+#equation
+{
+	background-color : #D3D3D3;
+	text-align: center;
+	box-sizing: border-box;
+	border: 2px solid #000;
+}
+
+
+#p-before-list
+{
+	margin-bottom: 0.5rem;
+}
+
+#p-after-list
+{
+	margin-top: 1rem;
+}
+
+.definition
+{
+	background-color: #D3D3D3 ;
+	box-sizing: border-box;
+	border: 2px solid #000;
+	padding: 10px 10px 10px 10px;
+}
+
+.list
+{	margin-top:  0px;
+	padding-top:  10px;
+	list-style-type: disc;
+	padding-left: 25px;
+	background-color : #D3D3D3;
+	box-sizing: border-box;
+	border: 2px solid #000;
+	padding-right: 20px;
+}
+
+.p-inside-def
+{
+	color: #000;
+}
+
+.list-no-box
+{	
+	list-style-type: disc;
+	padding-left: 25px;
+	padding-right: 20px;
+}
+
+.nested-list
+{	
+	list-style-type: square;
+}
+
+.list-item
+{
+	padding-bottom: 10px;
+}
+
+.list:last-child
+{
+	padding-bottom:  10px;
+}
 
 @media (max-width: 8.5in) {:root {font-size: 18px;}}
 @media (max-width: 5in) {:root {font-size: 16px;}}
