@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Turing Machines</title>
+	<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/-debug.css">
+	<link rel="stylesheet" href="styles/article.css">
+	<link rel="stylesheet" href="styles/article-image.css">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+		<article>
+		<h1><a href="?">Turing Machines</a></h1>
+		<time datetime="04-21-2021">Apr. 21, 2021</time>
+		<p>In this post I cover definitions of Turing machines, computability, running time and time constructability</p>
+		<p id="equation" class="p-inside-def">Turing machine = computing machine </p>
+		<p id="p-before-list">The machine manipulates symbols on a tape. It does so by performing the following steps
+		<ul class="list">
+			<li class="list-item">Read a single tape cell</li>
+			<li class="list-item">Extract the symbol in that cell</li>
+			<li class="list-item">Manipulate symbol, by following rules from a table</li>
+			<li class="list-item">Assign an internal state to the machine</li>
+		</ul>
+		<p id="p-after-list">For every symbol that can possibly be read from the tape, there exists a rule in the table that directs the machine to perform an <em>action</em>. At a given point in time, the machine always exists in a particular state. It can be assumed that the machine starts at a specially designed <em>starting-state</em> and finishes at a <em>halting-state</em>. When designing such machines, the  <em>starting-state</em> is usually unique, but there can be more than <em>halting-state</em>. </p>
+		
+		<p id="p-before-list">  An action is an elementary operation the machine performs. When I say elementary I imply that the time taken to complete an action is negligibly small. Elementary operations are usually one of the following </p>
+		<ul class="list">
+			<li class="list-item">Reading a symbol from a tape cell</li>
+			<li class="list-item"> Writing a symbol to a tape cell </li>
+			<li class="list-item"> Moving the machines tape head a constant number of cells left or right
+			<li class="list-item">Changing the internal state of the machine</li>
+		</ul>
+		<p id="p-after-list">Now that we have understood what a Turing machine does on an informal level, we can proceed to formally define such a machine. I define a Turing machine with \(k\) tapes and shall follow the definition as presented in Arora and Barak.</p>
+		<div class="gray-box">
+			<p class="p-inside-def" id="p-before-list">
+				<strong>Defintion:</strong> A Turing Machine \(M\) with \(k\) tapes is a triple \((\Gamma, Q, \delta)\) with
+				<ul class="list-no-box">
+					<li class="list-item">
+						<p class="p-inside-def" id="p-before-list">\(\Gamma\): being the set of tape symbols. It contains the set \({0, 1}\) and additionally contains two special symbols
+						<ul class="list-no-box nested-list">
+							<li class="list-item">a blank symbol denoted by <em>bl</em></li>
+							<li class="list-item">a start symbol denoted by <em>st</em></li>
+						</ul>
+						</p>
+						<li class="list-item">
+							<p class="p-inside-def" id="p-before-list">\(Q\): being the set of internal states the machine can take.As mentioned earlier, it contains to special states
+							<ul class="list-no-box nested-list">
+								<li class="list-item">\(q_{start}\): a <em>starting-state</em></li>
+								<li class="list-item">\(q_{halt}\): a <em>halting-state</em></li>
+							</ul>
+							</p>
+			 			</li>
+			 			<li class="list-item">
+			 				<p class="p-inside-def" id="p-before-list">
+			 					\(\delta: Q \times \Gamma^{k} \mapsto Q \times \Gamma^{k-1} \times \{L, S, R\}^{k}\)
+			 					being the transition function. 
+			 				</p>
+			 			</li>
+					</li>
+				</ul>
+			</p>
+		</div>
+		<p id="p-after-list"> Out of the \(k\) tapes, one tape is a read-only tape, which we assume contains the input to the machine. The remaining \(k - 1\) tapes are read-write tapes. We often refer to these tapes as work tapes. </p>	
+		<p> The heart of the Turing machine is the transition function. It is what decides the action that the machine can take when it reads a symbol from a tape cell. To understand what it does consider a machine that is currently in state \(q \in Q\) and reads \((\sigma_1, \sigma_2, ... ,\sigma_k)\) from the \(k\) tapes. It passes this along to the transition function which outputs, a new state \(q' \in Q\), a sequence of new symbols \(( \sigma'_2, ... ,\sigma'_k)\) which will be written to the \(k-1\) work tapes and \(z \in \{L, S, R\}^{k}\).</p>
+		<p> The \(k\) tuple \(z\) tells the machine whether the tape head corresponding to each tape should move left(\(L\)), right(\(R\)) or stay in the same position (\(S\)). This process of reading \(k\) symbols, executing the transition function on the input that is read, writing to the \(k-1\) work tapes and moving the tape heads as given by \(z\) is referred to as on execution of a single computation step. The machine executes sequences of such computational steps until it reaches \(q_{halt}\) at which point the computation is done. </p>
+		<p> For the initialization step, the read-only input tape contains the input string (\(x\)) to the right of \(st\). The \(k - 1\) work tapes contain \(bl\). All tape heads are aligned to the right of \(st\) and the initial state is \(q_{start}\). Arora and Barak as an example design a Turing Machine to verify whether an input string is a palindrome or not. I point you to this example, should you still have questions about Turing machines. 
+		</p>
+
+		<p>We can now define the terms computation and running time formally. Recall that \(\{0, 1\}^{*}\) denotes the set of all binary strings. I once again use the defintion from Arora and Barak </p>
+		<div class="gray-box">
+			<p class="p-inside-def">
+				<strong>Defintion:</strong> Let \(f: \{0, 1\}^{*} \mapsto \{0, 1\}^{*}\) and let \(T: \mathbb{N} \mapsto \mathbb{N}\) and let \(M\) be a Turing machine. \(M\) is said to compute \(f\) in \(T(n)\)-time, if for every \(x \in \{0, 1\}^{*}\), if \(M\) is initialized to the starting configuration on \(x\), then outputs \(f(x)\) to the output tape using at most \(T(|x|)\) computation steps and halts. 
+			</p>
+		</div>
+		<p id="p-after-list">
+			\(f(\cdot)\) is said to be a computable function and the running time of \(M\) is \(T(n)\). 
+		</p>
+		<div class="gray-box">
+			<p class="p-inside-def">
+				<strong>Defintion:</strong> \(T(n)\) is said to be time constructible if \(T(n) \geq n\) and there is a Turing machine \(M'\) that computes \(x \mapsto bin(T(|x|)\) in time \(T(n)\). Where \(bin(x)\) denotes the binary representation of \(x\)
+			</p>
+		</div>
+		<p id='p-after-list'>
+			Turing machines are extremely robust constructions. Most of the nitty gritty specifics that we have used to define Turing machines are entirely arbitrary. For example, we define \(k\) tape Turing machines, but one might for chuckles just as well define a \(2k\) tape Turing machine or even a single-tape Turing machine. In fact, Sipser's classic textbook on computational complexity almost entirely uses single tape machines. We could also instead of using \(\{0, 1, st, bl\}\) as our set of tape symbols use any other other symbol set. It turns out that the set of functions a single-tape Turing machine can compute is identical to the set of functions a \(k\) tape machine can compute. The same holds for a Turing machine with symbol set \(\Gamma\) and for a Turing machine with symbol set \(\Gamma'\). I will cover the equivalence proofs in another post.
+		</p>
+	</article>
+
+</body>
+</html>

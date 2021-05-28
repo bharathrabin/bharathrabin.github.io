@@ -41,7 +41,7 @@ p    { font: 400 1rem/1.5   "Roboto";   color: hsl(000, 0%, 33%);}
 	margin-top: 1rem;
 }
 
-.definition
+.gray-box
 {
 	background-color: #D3D3D3 ;
 	box-sizing: border-box;
