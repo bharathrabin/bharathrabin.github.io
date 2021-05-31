@@ -2,70 +2,72 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
 	<title>Hi There!</title>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 </head>
 <body>
 	<div class="wrapper">
-		<header class="masthead">
+		<header class="myheader">
+			<h1 class="myheader-title">
+				Bharath Rabindranath
+			</h1>
 			<div class="mypic"></div>
-			<h3 class="masthead-title">
-				<a href="#">Bharath Rabindranath</a>
-			</h3>
-			<p class="profession">MSc Computer Science 2021,  <a href="https://www.tu.berlin/en/">TU Berlin</a><br/>
-			Previously at <a href="https://www.teraki.com/">Teraki</a>, <a href="https://pyspace.github.io/pyspace/">DFKI Bremen</a>
-			</p>
-			<br>
-				&nbsp&nbsp&nbsp <a href="blog_main.html"><i>Blog</i></a>
-				&nbsp&nbsp&nbsp <a href="#"><i>Reading List</i></a>
-			</header>
+			<div class="pure-menu pure-menu-horizontal">
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item" id="nav-item"><a href="blog_main.html">Blog</a></li>
+					<li class="pure-menu-item" id="nav-item"><a href="#">Reading List</a></li>
+					<li class="pure-menu-item" id="nav-item"><a href="#">Music</a></li>
+				</ul>
+			</div>
+		</header>
 		<div class="content">
-			<h3>About me</h3>
+			<h1>Hello</h1>
 			<p>
-				I completed my undergraduate degree from Jacobs University in early 2017. I worked full time from 2017 to 2018 before reentering university for my graduate programme. My interests lie at the intersection of Theoretical Computer Science and Machine Learning. Most of my courses that I have completed in my degree relate to one of these two fields of computing. I recently started blogging about topics that I often think about. Do head over and check out my blog. And do contact me if you'd like to chat about these topics.
+				I'm Bharath, an M.Sc. student in Computer Science at <a href="https://www.tu.berlin/en/">TU Berlin</a>. I completed my undergraduate degree from Jacobs University in January 2017. From February 2017 till December 2019 I worked at <a href="https://www.teraki.com/">Teraki</a>. From January 2017 till April 2018 I worked full time. Thereafter, due to my enrollment at university, I worked 20 hours a week.  My interests lie at the intersection of Theoretical Computer Science and Machine Learning. Most of my courses that I have completed in my degree relate to one of these two fields of computing. I recently started blogging about topics that I often think about. Head over and check out my blog. Do contact me if you'd like to chat about these topics.
 			</p>
 			<p>
-				Outside professional activities, I love exploring various genres of music. Currently, I am exploring the breadth of what electronic music has to offer. I am a self-taught DJ and I enjoy mixing bass music, broken beats, house (and associated sub-genres) and techno. I am crazy about football and tennis. I am a diehard Liverpool F.C. fan, but I am always down to watch a game of football regardless of which teams are playing. I enjoy cooking (mostly for others, it isn't the same when I cook for myself) and catching up with friends.
+				Outside professional activities, I love exploring various genres of music. Currently, I am exploring the breadth of what electronic music has to offer. I am a self-taught DJ and I enjoy mixing bass music, broken beats, house and techno. I am crazy about tennis and football. I am a diehard Liverpool F.C. fan, but I am always down to watch a game of football regardless of which teams are playing. I enjoy cooking (mostly for others, it isn't the same when I cook for myself) and catching up with friends.
 			</p>
-			<table class="contact">
-				<tr>
-					<td>
-						<a href="https://github.com/bharathrabin">
-							<div>
-								<i class="fab fa-github fa-2x"></i>
-								<p>Github</p>
-							</div>
-						</a>
-					</td>
-					<td>
-						<a href="https://twitter.com/brabin0719">
-							<div>
-								<i class="fab fa-twitter fa-2x"></i>
-								<p>Twitter</p>
-							</div>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<a href="https://www.linkedin.com/in/bharath-rabindranath/">
-							<div>
-								<i class="fab fa-linkedin-in fa-2x"></i>
-								<p>LinkedIn</p>
-							</div>
-						</a>
-					</td>
-					<td>
-						<a href="mailto:bharadwaj.rabindranath@gmail.com">
-							<i class="fas fa-envelope fa-2x"></i>
-							<p>Email</p>
-						</a>
-					</td>
-				</tr>
-			</table>
+		</div>
+		<div class="contact-table" role="table">
+			<div class="row-item">
+				<a href="mailto:bharadwaj.rabindranath@gmail.com">
+					<span class="fas fa-envelope fa-1x icon"></span>
+					<span class="icon-text">Email</span>
+				</a>
+			</div>
+			<div class="row-item">
+			<a href="https://github.com/bharathrabin">
+				<span class="fab fa-github fa-1x icon"></span>
+				<span class="icon-text">Github</span>
+			</div>
+			<div class="row-item">
+				<a href="https://twitter.com/brabin0719">
+					<span class="fab fa-twitter fa-1x icon"></span>
+					<span class="icon-text">Twitter</span>
+				</a>
+			</div>
+			<div class="row-item" id="second-row">
+				<a href="https://www.linkedin.com/in/bharath-rabindranath/">
+					<span class="fab fa-linkedin-in fa-1x icon"></span>
+					<span class="icon-text">LinkedIn</span>
+				</a>				
+			</div>
+			<div class="row-item" id="second-row">
+				<a href="https://soundcloud.com/bharath-rabindranath">
+					<span class="fab fa-soundcloud fa-1x icon"></span>
+					<span class="icon-text">Soundcloud</span>
+				</a>
+			</div>
+
+
+
 		</div>
 	</div>
 </body>
