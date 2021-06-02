@@ -241,6 +241,15 @@ p > a:hover
 {
   max-width: 700px;
 }
+
+.row-item
+{
+  padding: 10px 15px 10px;
+}
+
+.row-item > a:hover
+{
+  padding: 10px 19px 10px;
 }
 
 
