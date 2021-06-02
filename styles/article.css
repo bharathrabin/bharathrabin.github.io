@@ -17,10 +17,10 @@ article * {
 time,p:not(:last-child) { margin-bottom: 2.0rem; }
 
 h1   { font: 700 2rem/1.2   'Roboto', sans-serif;   color: #000; font-weight: 500}
-h2   { font: 400 1.5rem/1.2 "Roboto", sans-serif;   color: #000;}
-h3 	 { font: 700 1rem/1.2   "Roboto", sans-serif;   color: #000;}
-time { font: 700 1rem/1.2   "Roboto", sans-serif;   color: hsl(337, 94%,47%);}
-p    { font: 400 1rem/1.5   "Roboto", sans-serif;   color: #000; font-weight: lighter;}
+h2   { font: 400 1.5rem/1.2 'Roboto', sans-serif;   color: #000;}
+h3 	 { font: 700 1rem/1.2   'Roboto', sans-serif;   color: #000;}
+time { font: 700 1rem/1.2   'Roboto', sans-serif;   color: hsl(337, 94%,47%);}
+p    { font: 400 1rem/1.5   'Roboto', sans-serif;   color: #000; font-weight: lighter;}
 
 #equation
 {
@@ -58,6 +58,7 @@ p    { font: 400 1rem/1.5   "Roboto", sans-serif;   color: #000; font-weight: li
 	box-sizing: border-box;
 	border: 2px solid #000;
 	padding-right: 20px;
+	font-weight: lighter;
 }
 
 .p-inside-def
@@ -80,6 +81,7 @@ p    { font: 400 1rem/1.5   "Roboto", sans-serif;   color: #000; font-weight: li
 .list-item
 {
 	padding-bottom: 10px;
+	font-weight: lighter;
 }
 
 .list:last-child

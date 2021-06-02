@@ -1,4 +1,4 @@
-:root {font: 20px/1.2 "Roboto", san-serif;}
+:root {font-family: 'Roboto', san-serif; font-weight: lighter}
 
 body,
 body * {

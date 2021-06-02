@@ -19,21 +19,22 @@
 		<time datetime="04-21-2021">Apr. 21, 2021</time>
 		<p>In this post I cover definitions of Turing machines, computability, running time and time constructability</p>
 		<p id="equation" class="p-inside-def">Turing machine = computing machine </p>
+		<p>A Turing machine comprises of a set number of tapes and a device that can scan tapes and maintain various internal states. Each tape consists of cells and each cell consists of one and only one symbol. It is assumed that the length of a tape is infinite. It is quite common to think of tapes as computer memory. The higher the number of tapes, the more the memory</p>
 		<p id="p-before-list">The machine manipulates symbols on a tape. It does so by performing the following steps
 		<ul class="list">
-			<li class="list-item">Read a single tape cell</li>
-			<li class="list-item">Extract the symbol in that cell</li>
-			<li class="list-item">Manipulate symbol, by following rules from a table</li>
-			<li class="list-item">Assign an internal state to the machine</li>
+			<li class="list-item"><p>Read a single tape cell</p></li>
+			<li class="list-item"><p>Extract the symbol in that cell</p></li>
+			<li class="list-item"><p>Manipulate symbol, by following rules from a table</p></li>
+			<li class="list-item"><p>Assign an internal state to the machine</p></li>
 		</ul>
 		<p id="p-after-list">For every symbol that can possibly be read from the tape, there exists a rule in the table that directs the machine to perform an <em>action</em>. At a given point in time, the machine always exists in a particular state. It can be assumed that the machine starts at a specially designed <em>starting-state</em> and finishes at a <em>halting-state</em>. When designing such machines, the  <em>starting-state</em> is usually unique, but there can be more than one <em>halting-state</em>. </p>
 		
 		<p id="p-before-list">  An action is an elementary operation the machine performs. When I say elementary I imply that the time taken to complete an action is negligibly small. Elementary operations are usually one of the following </p>
 		<ul class="list">
-			<li class="list-item">Reading a symbol from a tape cell</li>
-			<li class="list-item"> Writing a symbol to a tape cell </li>
-			<li class="list-item"> Moving the machines tape head a constant number of cells left or right
-			<li class="list-item">Changing the internal state of the machine</li>
+			<li class="list-item"><p>Reading a symbol from a tape cell</p></li>
+			<li class="list-item"><p>Writing a symbol to a tape cell</p></li>
+			<li class="list-item"><p>Moving the machines tape head a constant number of cells left or right</p></li>
+			<li class="list-item"><p>Changing the internal state of the machine</p></li>
 		</ul>
 		<p id="p-after-list">Now that we have understood what a Turing machine does on an informal level, we can proceed to formally define such a machine. I define a Turing machine with \(k\) tapes and shall follow the definition as presented in Arora and Barak.</p>
 		<div class="gray-box">
@@ -43,15 +44,15 @@
 					<li class="list-item">
 						<p class="p-inside-def" id="p-before-list">\(\Gamma\): being the set of tape symbols. It contains the set \({0, 1}\) and additionally contains two special symbols
 						<ul class="list-no-box nested-list">
-							<li class="list-item">a blank symbol denoted by <em>bl</em></li>
-							<li class="list-item">a start symbol denoted by <em>st</em></li>
+							<li class="list-item"><p>a blank symbol denoted by <em>bl</em></p></li>
+							<li class="list-item"><p>a start symbol denoted by <em>st</em></p></li>
 						</ul>
 						</p>
 						<li class="list-item">
 							<p class="p-inside-def" id="p-before-list">\(Q\): being the set of internal states the machine can take.As mentioned earlier, it contains to special states
 							<ul class="list-no-box nested-list">
-								<li class="list-item">\(q_{start}\): a <em>starting-state</em></li>
-								<li class="list-item">\(q_{halt}\): a <em>halting-state</em></li>
+								<li class="list-item"><p>\(q_{start}\): a <em>starting-state</em></p></li>
+								<li class="list-item"><p>\(q_{halt}\): a <em>halting-state</em></p></li>
 							</ul>
 							</p>
 			 			</li>
