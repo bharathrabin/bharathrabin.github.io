@@ -38,7 +38,7 @@ p    { font: 400 1rem/1.5   'Roboto', sans-serif;   color: #000; font-weight: li
 
 #p-after-list
 {
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 }
 
 .gray-box
@@ -71,6 +71,11 @@ p    { font: 400 1rem/1.5   'Roboto', sans-serif;   color: #000; font-weight: li
 	list-style-type: disc;
 	padding-left: 25px;
 	padding-right: 20px;
+}
+
+.list-no-box > .list-item-special
+{
+	list-style-type: none;
 }
 
 .nested-list
