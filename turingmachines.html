@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Turing Machines</title>
-	<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/-debug.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
 		<article>
-		<h1><a href="?">Turing Machines</a></h1>
+		<h1>Turing Machines</h1>
 		<time datetime="04-21-2021">Apr. 21, 2021</time>
 		<p>In this post I cover definitions of Turing machines, computability, running time and time constructability</p>
 		<p id="equation" class="p-inside-def">Turing machine = computing machine </p>
@@ -38,7 +38,7 @@
 		<p id="p-after-list">Now that we have understood what a Turing machine does on an informal level, we can proceed to formally define such a machine. I define a Turing machine with \(k\) tapes and shall follow the definition as presented in Arora and Barak.</p>
 		<div class="gray-box">
 			<p class="p-inside-def" id="p-before-list">
-				<strong>Defintion:</strong> A Turing Machine \(M\) with \(k\) tapes is a triple \((\Gamma, Q, \delta)\) with
+				<strong>Definition:</strong> A Turing Machine \(M\) with \(k\) tapes is a triple \((\Gamma, Q, \delta)\) with
 				<ul class="list-no-box">
 					<li class="list-item">
 						<p class="p-inside-def" id="p-before-list">\(\Gamma\): being the set of tape symbols. It contains the set \({0, 1}\) and additionally contains two special symbols
@@ -74,7 +74,7 @@
 		<p>We can now define the terms computation and running time formally. Recall that \(\{0, 1\}^{*}\) denotes the set of all binary strings. I once again use the defintion from Arora and Barak </p>
 		<div class="gray-box">
 			<p class="p-inside-def">
-				<strong>Defintion:</strong> Let \(f: \{0, 1\}^{*} \mapsto \{0, 1\}^{*}\) and let \(T: \mathbb{N} \mapsto \mathbb{N}\) and let \(M\) be a Turing machine. \(M\) is said to compute \(f\) in \(T(n)\)-time, if for every \(x \in \{0, 1\}^{*}\), if \(M\) is initialized to the starting configuration on \(x\), then outputs \(f(x)\) to the output tape using at most \(T(|x|)\) computation steps and halts. 
+				<strong>Definition:</strong> Let \(f: \{0, 1\}^{*} \mapsto \{0, 1\}^{*}\) and let \(T: \mathbb{N} \mapsto \mathbb{N}\) and let \(M\) be a Turing machine. \(M\) is said to compute \(f\) in \(T(n)\)-time, if for every \(x \in \{0, 1\}^{*}\), if \(M\) is initialized to the starting configuration on \(x\), then outputs \(f(x)\) to the output tape using at most \(T(|x|)\) computation steps and halts. 
 			</p>
 		</div>
 		<p id="p-after-list">
@@ -82,7 +82,7 @@
 		</p>
 		<div class="gray-box">
 			<p class="p-inside-def">
-				<strong>Defintion:</strong> \(T(n)\) is said to be time constructible if \(T(n) \geq n\) and there is a Turing machine \(M'\) that computes \(x \mapsto bin(T(|x|)\) in time \(T(n)\). Where \(bin(x)\) denotes the binary representation of \(x\)
+				<strong>Definition:</strong> \(T(n)\) is said to be time constructible if \(T(n) \geq n\) and there is a Turing machine \(M'\) that computes \(x \mapsto bin(T(|x|)\) in time \(T(n)\). Where \(bin(x)\) denotes the binary representation of \(x\)
 			</p>
 		</div>
 		<p id='p-after-list'>
