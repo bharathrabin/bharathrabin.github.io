@@ -8,55 +8,29 @@
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/-debug.css">
 	<link rel="stylesheet" href="styles/article.css">
-	<style>
-		#toc_container {
-		    background: #f9f9f9 none repeat scroll 0 0;
-		    border: 1px solid #aaa;
-		    display: table;
-		    font-size: 95%;
-		    margin-bottom: 1em;
-		    padding: 20px;
-		    width: auto;
-			}
+	<link rel="stylesheet" href="styles/blog_main.css">
 
-		.toc_title {
-		    font-weight: 700;
-		    text-align: center;
-		}
-		.toc_list{
-			list-style-type: upper-roman;
-		}
-
-		#toc_container li, #toc_container ul, #toc_container ul li{
-		    padding: 5px 15px !important;
-		}
-
-		.inner_list{
-			list-style-type: decimal;
-		}
-	</style>
 
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 	<article id="List-Of-Posts">
-		<h1><a href="blog_main.html">List Of Posts</a></h1>
+		<h1>List Of Posts</h1>
 		<time datetime="05-21-2021">May 21, 2021</time>
 		<div id="toc_container">
-			<p class="toc_title">Contents</p>
 				<ul class="toc_list">
 			  		<li>Basic Intuitions in Theoretical Computer Science
 			  			<ul class="inner_list">
-			    			<li><a href="blog1.html">Decision Problems/Languages</a></li>
-			    			<li><a href="turingmachines.html">Turing Machines</a></li>
-			    			<li><a href="#">P, NP</a></li>
+			    			<li class="inner-list-item"><a href="blog1.html">Decision Problems/Languages</a></li>
+			    			<li class="inner-list-item"><a href="turingmachines.html">Turing Machines</a></li>
+			    			<li class="inner-list-item"><a href="#">P, NP</a></li>
 			  			</ul>
 					</li>
 					<li>Approximation Algorithms
 			  			<ul class="inner_list">
-			    			<li><a href="#">Approximability of Metric-TSP</a></li>
-			    			<li><a href="#">Inapproximability of General-TSP</a></li>
+			    			<li class="inner-list-item"><a href="#">Approximability of Metric-TSP</a></li>
+			    			<li class="inner-list-item"><a href="#">Inapproximability of General-TSP</a></li>
 			  			</ul>	
 					</li>
 				</ul>
